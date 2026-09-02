@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "segmentation-pipeline"
+version = "0.1.0"
+description = "Config-driven end-to-end semantic segmentation pipeline with training, evaluation, prediction, tests, CI, and release governance."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26", "PyYAML>=6.0", "torch>=2.2"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+
+[project.scripts]
+segmentation-pipeline = "segmentation_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

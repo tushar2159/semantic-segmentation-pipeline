@@ -1,0 +1,10 @@
+seed: 42
+device: "cpu"
+image_size: 64
+batch_size: 4
+epochs: 2
+learning_rate: 0.001
+model: "TinyUNet"
+num_classes: 4
+output_dir: "runs/default"
+ignore_index: 255
