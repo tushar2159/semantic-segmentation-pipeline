@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Config-driven end-to-end semantic segmentation pipeline with training, evaluation, prediction, tests, CI, and release governance."
 requires-python = ">=3.10"
 dependencies = [
-  "numpy>=1.26", "PyYAML>=6.0", "torch>=2.2"
+  "numpy>=1.26", "PyYAML>=6.0.3", "torch>=2.2"
 ]
 
 [project.optional-dependencies]
